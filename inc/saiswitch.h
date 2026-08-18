@@ -3680,6 +3680,42 @@ typedef enum _sai_switch_attr_t
     SAI_SWITCH_ATTR_LINK_UP_DEBOUNCE_TIMEOUT_INTEVALS,
 
     /**
+     * @brief Global PTP clock identity (8-octet array formatted as per IEEE 1588)
+     *
+     * @type sai_u8_list_t
+     * @flags CREATE_AND_SET
+     * @default empty
+     */
+    SAI_SWITCH_ATTR_CLOCK_ID,
+
+    /**
+     * @brief Maximum number of ports enabled for peer delay.
+     *
+     * @type sai_uint16_t
+     * @flags CREATE_AND_SET
+     * @isvlan false
+     * @default 0
+     */
+    SAI_SWITCH_ATTR_PTP_PDELAY_MAX_PORTS,
+
+    /**
+     * @brief Maximum number of ports that can support peer delay exchanges
+     *
+     * @type sai_uint16_t
+     * @flags READ_ONLY
+     */
+    SAI_SWITCH_ATTR_MAX_SUPPORTED_PTP_PDELAY_PORTS,
+
+    /**
+     * @brief Peer delay timestamping mode. True for two-step (with follow-up), False for one-step
+     *
+     * @type bool
+     * @flags CREATE_AND_SET
+     * @default false
+     */
+    SAI_SWITCH_ATTR_PTP_PDELAY_IS_TWO_STEP,
+
+    /**
      * @brief End of attributes
      */
     SAI_SWITCH_ATTR_END,

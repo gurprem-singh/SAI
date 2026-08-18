@@ -308,6 +308,7 @@ typedef enum _sai_object_type_t
     SAI_OBJECT_TYPE_CBFC_CREDIT_PROFILE      = 118,
     SAI_OBJECT_TYPE_PERFMON                  = 119,
     SAI_OBJECT_TYPE_TAM_EVENT_LEARN_ENTRY    = 120,
+    SAI_OBJECT_TYPE_PTP_PDELAY               = 121,
 
     /** Must remain in last position */
     SAI_OBJECT_TYPE_MAX,
